@@ -1,0 +1,26 @@
+{
+  "apps": [
+    {
+      "name": "Auth Apollo",
+      "script": "./dist/index.js",
+      "merge_logs": true,
+      "max_restarts": 5,
+      "max_memory_restart": "200M",
+      "watch": "dist",
+      "ignore_watch": ["node_modules", ".git"],
+      "exec_mode": "cluster",
+      "env": {
+        "PORT": 3010,
+        "NODE_ENV": "development"
+      },
+      "env_staging": {
+        "PORT": 3010,
+        "NODE_ENV": "staging"
+      },
+      "env_production": {
+        "PORT": 3010,
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}

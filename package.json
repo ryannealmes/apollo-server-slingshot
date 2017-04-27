@@ -1,0 +1,28 @@
+{
+  "name": "apollo-auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start processes.json -i max --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-loader": "^7.0.0",
+    "body-parser": "^1.17.1",
+    "fs": "0.0.1-security",
+    "graphql": "^0.9.3",
+    "graphql-server-express": "^0.7.2",
+    "graphql-tools": "^0.11.0",
+    "net": "^1.0.2",
+    "path": "^0.12.7",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "devDependencies": {
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "2",
+    "webpack-node-externals": "^1.5.4"
+  }
+}
