@@ -1,5 +1,5 @@
 {
-  "name": "apollo-auth",
+  "name": "apollo-server-slingshot",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -21,6 +21,8 @@
     "webpack-dev-server": "^2.4.5"
   },
   "devDependencies": {
+    "babel-plugin-inline-import": "^2.0.4",
+    "graphql-tag": "^2.0.0",
     "webpack": "^2.4.1",
     "webpack-dev-server": "2",
     "webpack-node-externals": "^1.5.4"

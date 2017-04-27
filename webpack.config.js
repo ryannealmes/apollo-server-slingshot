@@ -6,7 +6,8 @@ module.exports = {
   devtool: 'source-map',
   watch: true,
   watchOptions: {
-    ignored: /node_modules/
+    ignored: /node_modules/,
+    aggregateTimeout: 1000
   },
   context: path.resolve(__dirname, './src'),
   entry: {
@@ -31,20 +32,17 @@ module.exports = {
     })
   ],
   module: {
-    rules: [{
-      test: /\.js$/,
-      use: {
-        loader: 'babel-loader',
-        options: {
-          presets: [
-            ['env', {
-              'targets': {
-                'node': 'current'
-              }
-            }]
-          ]
-        }
+    rules: [
+      {
+        test: /\.js?$/,
+        exclude: /node_modules/,
+        loaders: ['babel-loader']
+      },
+      {
+        test: /\.(graphql|gql)$/,
+        exclude: /node_modules/,
+        loader: 'graphql-tag/loader',
       }
-    }]
+    ]
   }
 };

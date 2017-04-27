@@ -1,10 +1,4 @@
-const typeDefinitions = `
-  type Query {
-    testString: String
-  }
-  schema {
-    query: Query
-  }
-`;
+import query from './query.graphql';
+import schema from './schema.graphql';
 
-export default [typeDefinitions];
+export default [schema, query];
