@@ -2,6 +2,11 @@ const nodeExternals = require('webpack-node-externals');
 const path = require('path');
 const webpack = require('webpack');
 
+const GLOBALS = {
+  'process.env.NODE_ENV': JSON.stringify('development'),
+  __DEV__: true
+};
+
 module.exports = {
   devtool: 'source-map',
   watch: true,
@@ -25,6 +30,7 @@ module.exports = {
   },
   plugins: [
     new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.DefinePlugin(GLOBALS),
     new webpack.BannerPlugin({
       banner: 'require("source-map-support").install();',
       raw: true,

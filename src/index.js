@@ -22,5 +22,5 @@ app.get('/graphiql', graphiqlExpress({
 }));
 
 app.listen(PORT, function () {
-  console.log(`Listening on port ${PORT}`);
+  console.log(`Listening on port ${PORT} - ${process.env.NODE_ENV}`);
 });
