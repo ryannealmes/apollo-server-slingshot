@@ -1,7 +1,7 @@
 const resolvers = {
   Query: {
     testString(root, args){
-      return "Hello world";
+      return "Hello world from server";
     },
   }
 };

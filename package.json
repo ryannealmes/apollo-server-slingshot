@@ -11,6 +11,7 @@
   "dependencies": {
     "babel-loader": "^7.0.0",
     "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
     "fs": "0.0.1-security",
     "graphql": "^0.9.3",
     "graphql-server-express": "^0.7.2",
