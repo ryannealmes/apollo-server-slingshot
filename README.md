@@ -14,6 +14,12 @@ I think you only need to install `pm2` and `webpack` as global dependencies.
 - `webpack`
 - `npm start`
 
+another option is to use docker
+
+- `docker run -p 3003:3003 -d apollo-server-slingshot`
+
+You should be able to access your working graphql server on localhost:3003.
+
 ## IMPROVEMENTS
 
-There are loads of things that can be done here, this is just a first attempt to see if I am on the right track.
+There are loads of things that can be done here, this is just a first attempt to see if I am on the right track and if it's something the community is interested in. 

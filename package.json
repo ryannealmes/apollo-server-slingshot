@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start processes.json -i max --watch"
+    "start": "npm-run-all server:build server:run server:logs",
+    "server:build": "webpack",
+    "server:run": "pm2 start processes.json -i max --watch",
+    "server:logs": "pm2 logs all"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "body-parser": "^1.17.1",
     "cors": "^2.8.3",
@@ -23,7 +27,9 @@
   },
   "devDependencies": {
     "babel-plugin-inline-import": "^2.0.4",
+    "babel-preset-env": "^1.4.0",
     "graphql-tag": "^2.0.0",
+    "npm-run-all": "^4.0.2",
     "webpack": "^2.4.1",
     "webpack-dev-server": "2",
     "webpack-node-externals": "^1.5.4"

@@ -3,6 +3,9 @@ const resolvers = {
     testString(root, args){
       return "Hello world from server";
     },
+    testString2(root, args){
+      return "Hello world from server";
+    },
   }
 };
 

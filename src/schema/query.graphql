@@ -1,3 +1,4 @@
 type Query {
   testString: String
+  testString2: String
 }
